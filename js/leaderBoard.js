@@ -28,6 +28,3 @@ fetch("http://13.246.29.212:3000/ola")
   console.error("Error fetching scores:", error);
 });
 
-const home = () => {
-  window.location = '../pages/start.html';
-};

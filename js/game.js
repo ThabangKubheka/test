@@ -1,5 +1,3 @@
-
-
 const selectors = {
   boardContainer: document.querySelector(".board-container"),
   board: document.querySelector(".board"),
@@ -16,22 +14,17 @@ const state = {
   totalTime: 0,
   loop: null,
   score: 1000,
-  user: null
+  user: null,
 };
 
 function updateUser(email) {
-  state.user = email; 
-  console.log("Updated user:", state.user);
+  state.user = email;
 }
 
 const userEmail = localStorage.getItem("userEmail");
 if (userEmail) {
   updateUser(userEmail);
-} else {
-  window.location = "../pages/login.html";
-  console.log("User email not found.");
 }
-
 const shuffle = (array) => {
   const clonedArray = [...array];
 
@@ -163,26 +156,24 @@ const flipCard = (card) => {
           `;
 
       clearInterval(state.loop);
-          try{
-           // Call the API to insert user and score into the database
-           const response =await fetch("http://13.246.29.212:3000/score", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: new URLSearchParams({
-              email: state.user,
-              score: state.score,
-            }),
-          });
+      try {
+        const response = await fetch("http://13.246.29.212:3000/score", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+            email: state.user,
+            score: state.score,
+          }),
+        });
 
-          const result = await response.text();
-          alert(result);
-          console.log(result);
-
-        } catch (error) {
-          console.error("An error occurred:", error);
-        }
+        const result = await response.text();
+        alert(result);
+        console.log(result);
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
     }, 1000);
   }
 };
@@ -207,7 +198,8 @@ const attachEventListeners = () => {
 };
 
 const scores = () => {
-  window.location = '../pages/leaderBoard.html';};
+  window.location = "leaderBoard.html";
+};
+
 generateGame();
-console.log(state.user)
 attachEventListeners();

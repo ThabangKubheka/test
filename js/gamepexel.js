@@ -20,9 +20,7 @@ const state = {
 
 function updateUser(email) {
   state.user = email;
-  console.log("Updated user:", state.user);
 }
-
 
 const shuffle = (array) => {
   const clonedArray = [...array];
@@ -204,7 +202,7 @@ const attachEventListeners = () => {
 };
 
 const scores = () => {
-  window.location = '../pages/leaderBoard.html';
+  window.location = 'leaderBoard.html';
 };
 
 async function initGame() {
