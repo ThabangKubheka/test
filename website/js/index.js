@@ -1,3 +1,3 @@
 const login = () => {
-  window.location = "../test/index.html";
+  window.location.href = "../pages/login.html";
 };
