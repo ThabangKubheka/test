@@ -1,5 +1,4 @@
 
 const login = () => {
-   //window.location.href= 'login.html';
-   console.log("Hello")
+  window.location.href= 'login.html';
  };
