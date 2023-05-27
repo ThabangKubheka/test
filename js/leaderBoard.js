@@ -1,4 +1,4 @@
-fetch("http://13.246.29.212:3000/ola")
+fetch("https://thabanigame.azurewebsites.net/ola")
 .then(response => response.json())
 .then(data => {
   console.log(data);

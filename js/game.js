@@ -157,7 +157,7 @@ const flipCard = (card) => {
 
       clearInterval(state.loop);
       try {
-        const response = await fetch("http://13.246.29.212:3000/score", {
+        const response = await fetch("https://thabanigame.azurewebsites.net/score", {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
