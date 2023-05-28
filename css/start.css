@@ -1,41 +1,5 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
+html {
     height: 100vh;
-    color: #FFFFFF;
-}
-
-header {
-    width: 100%;
-    background-color: #c0c0c0;
-}
-
-#navigation {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 20px;
-}
-
-#navigation li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.choice-container {
-    display: flex;
-    margin-top: 50px;
-    width: 90%;
-    background-color: #ffffff;
-    border-radius: 15px;
-    padding: 20px;
 }
 
 .choice {
@@ -44,27 +8,27 @@ header {
     align-items: center;
     border: 1px solid #FFFFFF;
     border-radius: 15px;
-    margin: 20px;
+    margin: 20px auto; ;
     padding: 20px;
-    width: 100%;
+    width: 40%;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
 }
 
 .game-description h2 {
     font-size: 24px;
-    color: #333;
-    ;
+    color: #333;;
 }
 
-.game-description p {
+.game-description p {  
     font-size: 18px;
     color: #666;
 }
 
 .game-action a {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     padding: 10px 20px;
     text-decoration: none;
@@ -74,8 +38,7 @@ header {
     font-size: 20px;
     transition: background-color 0.3s ease;
 }
-
-.start-images {
+.start-images{
     height: 5rem;
     width: 5rem;
 }
@@ -83,7 +46,6 @@ header {
 .game-action a:hover {
     background-color: #796a96
 }
-
 .footer-content {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;

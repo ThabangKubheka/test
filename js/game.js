@@ -201,5 +201,9 @@ const scores = () => {
   window.location.href = "leaderBoard.html";
 };
 
+const back = () => {
+  window.location.href = "start.html";
+};
+
 generateGame();
 attachEventListeners();

@@ -205,6 +205,10 @@ const scores = () => {
   window.location.href = 'leaderBoard.html';
 };
 
+const back = () => {
+  window.location.href = 'start.html';
+};
+
 async function initGame() {
   state.images = await fetchImages();
   await generateGame();
