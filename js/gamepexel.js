@@ -58,15 +58,15 @@ const updateScore = () => {
 };
 
 async function fetchImages() {
-  const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.pexels.com/v1/search?query=random&page=1&per_page=10`, {
-    headers: {
-      Authorization: 'l9PluTI4z7UnJWgh6qdrQuI5xqcBm57b8itOnbd25pmz0iWLtgcVk6Az'
-    },
-  });
-  const data = await response.json();
-   document.getElementById('loading-screen').style.display = 'none';
-
-  return data.photos.map((photo) => photo.src.tiny);
+  try {
+    const response = await fetch('https://pexels.azurewebsites.net/api/images?query=pockemon&page=1&per_page=10');
+    const data = await response.json();
+    document.getElementById('loading-screen').style.display = 'none';
+    return data.map((photo) => photo.src.tiny);
+  } catch (error) {
+    console.error('Error fetching images:', error);
+    return [];
+  }
 }
 
 async function generateGame() {
@@ -161,7 +161,7 @@ const flipCard = (card) => {
       clearInterval(state.loop);
 
       try {
-        const response = await fetch("http://localhost:3000/score", {
+        const response = await fetch("https://thabanigame.azurewebsites.net/:3000/score", {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -202,7 +202,7 @@ const attachEventListeners = () => {
 };
 
 const scores = () => {
-  window.location = 'leaderBoard.html';
+  window.location.href = 'leaderBoard.html';
 };
 
 async function initGame() {

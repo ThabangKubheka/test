@@ -25,7 +25,7 @@ document
 
       if (result === "Login successful") {
         localStorage.setItem("userEmail", email);
-        window.location = 'start.html';
+        window.location.href = 'start.html';
       }
     } catch (error) {
       console.error("An error occurred:", error);

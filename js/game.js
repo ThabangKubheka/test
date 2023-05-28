@@ -198,7 +198,7 @@ const attachEventListeners = () => {
 };
 
 const scores = () => {
-  window.location = "leaderBoard.html";
+  window.location.href = "leaderBoard.html";
 };
 
 generateGame();
